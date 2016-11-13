@@ -15,7 +15,7 @@ class Weekday:
         d = datetime.isoweekday.today()
         cweekday = d.isoweekday
         
-        if ( cday == 1):
+        if ( cweekday == 1):
             await self.bot.say('**Happy Sunday**')
         else:
             await self.bot.say('**It isn\'t Sunday yet! Come back on Sunday!**')
