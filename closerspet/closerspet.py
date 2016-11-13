@@ -64,6 +64,7 @@ class closerspet:
 		
 	@commands.command(pass_context=True, aliases=[])
 	async def vaccine(self, context):
+		"""Vaccine -1"""
 		await self.bot.send_file(context.message.channel, '{}Vaccine.PNG'.format(self.base))
 			
 	@commands.command(pass_context=True, aliases=[])
@@ -72,6 +73,7 @@ class closerspet:
 
 	@commands.command(pass_context=True, aliases=[])
 	async def sehaok(self, context):
+		"""Seha OK"""
 		await self.bot.send_file(context.message.channel, '{}sehaok.png'.format(self.base))
 	
 	@commands.command(pass_context=True, aliases=[])
@@ -146,11 +148,16 @@ class closerspet:
 					
 	@commands.command(pass_context=True, aliases=[])
 	async def stk17(self, context):
+		"""Tina mad mood"""
 		await self.bot.send_file(context.message.channel, '{}stk17.png'.format(self.base))
 					
 	@commands.command(pass_context=True, aliases=[])
 	async def stk18(self, context):
 		await self.bot.send_file(context.message.channel, '{}stk18.png'.format(self.base))
+		
+	@commands.command(pass_context=True, aliases=[])
+	async def camilla(self, context):
+		await self.bot.send_file(context.message.channel, '{}CAMILLA.PNG'.format(self.base))
 		
 def setup(bot):
 	n = closerspet(bot)
