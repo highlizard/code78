@@ -12,8 +12,8 @@ class Weekday:
     @commands.command()
     async def sunday(self):
         """Hello Sunday!"""
-        d = datetime.isoweekday.today()
-        cweekday = date.isoweekday
+        d = datetime.datetime.today().weekday()
+        cweekday = date.datetime
         
         if ( cweekday == 1):
             await self.bot.say('**Happy Sunday**')
