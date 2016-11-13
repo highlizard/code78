@@ -13,7 +13,7 @@ class Weekday:
     async def newyear(self):
         """Hello Sunday!"""
         d = datetime.isoweekday.today()
-        cweekday = d.isoweekday
+        cweekday = date.isoweekday
         
         if ( cweekday == 1):
             await self.bot.say('**Happy Sunday**')
