@@ -10,7 +10,7 @@ class Weekday:
         self.bot = bot
 
     @commands.command()
-    async def newyear(self):
+    async def sunday(self):
         """Hello Sunday!"""
         d = datetime.isoweekday.today()
         cweekday = date.isoweekday
