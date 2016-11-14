@@ -10,16 +10,9 @@ class WeekdayTH:
 
     @commands.command()
     async def sun(self):
-        """Hello Sunday!"""
-        hello = context.message.author.name
-        day = {}
-        day['1'] = '**peeps:** 
-        day['2'] = '**stickers:** 
-        day['3'] = '**mini-toys:** 
-        day['4'] = '**chocolate eggs:** 
-        day['5'] = '**money:** 
+        """Hello Monday!"""
 
-        await self.bot.say('**{0} found {1}**'.format(hello, random.choice([day[i] for i in day])))
+        await self.bot.say("สวัสดีวันอาทิตย์ ขอให้จิตสดใส")
         
     @commands.command()
     async def mon(self):
