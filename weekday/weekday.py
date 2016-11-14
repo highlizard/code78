@@ -1,23 +1,53 @@
-from discord.ext import commands
-import random
 import discord
-import datetime
+from discord.ext import commands
 
 class Weekday:
-    """Happy Weekday"""
-    
+    """My custom cog that does stuff!"""
+
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command()
     async def sunday(self):
-        """Hello Sunday!"""
-        d = datetime.datetime.today().weekday()
-        cweekday = date.datetime
-        
-        if ( cweekday == 1):
-            await self.bot.say('**Happy Sunday**')
-        else:
-            await self.bot.say('**It isn\'t Sunday yet! Come back on Sunday!**')
-    def setup(bot):
-        bot.add_cog(Weekday(bot))
+        """This does stuff!"""
+
+        await self.bot.say("Hello Sunday!")
+    @commands.command()
+    async def monday(self):
+        """This does stuff!"""
+
+        await self.bot.say("Hello Monday!")
+
+    @commands.command()
+    async def tuesday(self):
+        """This does stuff!"""
+
+        await self.bot.say("Hello Tuesday!")
+
+    @commands.command()
+    async def wednesday(self):
+        """This does stuff!"""
+
+        await self.bot.say("Hello Wednesday!")
+
+    @commands.command()
+    async def thursday(self):
+        """This does stuff!"""
+
+        await self.bot.say("Hello Thursday!")
+
+    @commands.command()
+    async def friday(self):
+        """This does stuff!"""
+
+        await self.bot.say("Hello Friday!")
+
+    @commands.command()
+    async def saturday(self):
+        """This does stuff!"""
+
+        await self.bot.say("Hello Saturday!")
+
+
+def setup(bot):
+    bot.add_cog(Weekday(bot))
