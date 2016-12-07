@@ -8,19 +8,19 @@ class closerspet:
 
 	@commands.command(pass_context=True)
 	async def minibug(self, context):
-	   await self.bot.send_file(context.message.channel, '{}bug.png'.format(self.base))
+	   	await self.bot.send_file(context.message.channel, '{}bug.png'.format(self.base))
 
 	@commands.command(pass_context=True, aliases=[])
 	async def penguin(self, context):
-	   await self.bot.send_file(context.message.channel, '{}penguin.png'.format(self.base))
+	   	await self.bot.send_file(context.message.channel, '{}penguin.png'.format(self.base))
 
 	@commands.command(pass_context=True, aliases=[])
 	async def seha(self, context):
-	   await self.bot.send_file(context.message.channel, '{}seha.png'.format(self.base))
+	   	await self.bot.send_file(context.message.channel, '{}seha.png'.format(self.base))
 
 	@commands.command(pass_context=True, aliases=[])
 	async def seulbi(self, context):
-	   await self.bot.send_file(context.message.channel, '{}seulbi.png'.format(self.base))
+	   	await self.bot.send_file(context.message.channel, '{}seulbi.png'.format(self.base))
 
 	@commands.command(pass_context=True, aliases=[])
 	async def levia(self, context):
@@ -158,6 +158,11 @@ class closerspet:
 	@commands.command(pass_context=True, aliases=[])
 	async def camilla(self, context):
 		await self.bot.send_file(context.message.channel, '{}CAMILLA.PNG'.format(self.base))
+		
+	@commands.command(pass_context=True, aliases=[])
+	async def nata(self, context):
+		"""Nata mad mood"""
+		await self.bot.send_file(context.message.channel, '{}HUNTER_02.PNG'.format(self.base))
 		
 def setup(bot):
 	n = closerspet(bot)
