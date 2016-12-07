@@ -161,7 +161,7 @@ class closerspet:
 		
 	@commands.command(pass_context=True, aliases=[])
 	async def nata(self, context):
-		await self.bot.send_file(context.message.channel, '{}HUNTER_02.PNG'.format(self.base))
+		await self.bot.send_file(context.message.channel, '{}NATA.PNG'.format(self.base))
 		
 def setup(bot):
 	n = closerspet(bot)
