@@ -161,7 +161,6 @@ class closerspet:
 		
 	@commands.command(pass_context=True, aliases=[])
 	async def nata(self, context):
-		"""Nata mad mood"""
 		await self.bot.send_file(context.message.channel, '{}HUNTER_02.PNG'.format(self.base))
 		
 def setup(bot):
