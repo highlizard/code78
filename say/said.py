@@ -2,14 +2,14 @@ from cogs.utils import checks
 from discord.ext import commands
 
 
-class Say:
+class Said:
     """I'll repeat what you said."""
 
     def __init__(self, bot):
         self.bot = bot
 
     @commands.command()
-    async def say(self, *text):
+    async def said(self, *text):
         """I'll repeat what you said."""
 
         text = " ".join(text)
@@ -32,4 +32,4 @@ class Say:
 
 
 def setup(bot):
-    bot.add_cog(Say(bot))
+    bot.add_cog(Said(bot))
