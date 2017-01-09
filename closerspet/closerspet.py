@@ -163,6 +163,14 @@ class closerspet:
 	async def nata(self, context):
 		await self.bot.send_file(context.message.channel, '{}NATA.PNG'.format(self.base))
 		
+	@commands.command(pass_context=True, aliases=[])
+	async def trainer(self, context):
+		await self.bot.send_file(context.message.channel, '{}TRAINER.PNG'.format(self.base))
+		
+	@commands.command(pass_context=True, aliases=[])
+	async def youjong(self, context):
+		await self.bot.send_file(context.message.channel, '{}youjong.png'.format(self.base))
+		
 def setup(bot):
 	n = closerspet(bot)
 	bot.add_cog(n)
