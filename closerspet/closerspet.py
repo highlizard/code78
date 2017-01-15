@@ -169,7 +169,7 @@ class closerspet:
 		
 	@commands.command(pass_context=True, aliases=[])
 	async def youjong(self, context):
-		await self.bot.send_file(context.message.channel, '{}youjong.png'.format(self.base))
+		await self.bot.send_file(context.message.channel, '{}youjong.PNG'.format(self.base))
 		
 def setup(bot):
 	n = closerspet(bot)
