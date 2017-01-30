@@ -3,7 +3,7 @@ import random
 from discord.ext import commands
 
 class WeekdayTH:
-    """My custom cog that does stuff!"""
+    """สวัสดีวันอาทิตย์ - วันเสาร์!"""
 
     def __init__(self, bot):
         self.bot = bot
