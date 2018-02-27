@@ -54,13 +54,16 @@ class Nyaabuff:
     @commands.command()
     async def nyaabuff(self, ctx, user : discord.Member=None):
         """Give A Nyaa buff to users"""
-        
-        if user.id == self.bot.user.id:
-            await self.bot.say("Feels your Nyaa")
-            return
-        await self.bot.say("-Your {} increase, {} was"
-                           " buffed from NyaaNook-".format(rndchoice(self.items),
-                                             user.name))
+        msg = ' '
+        if user != None:
+            if user.id == self.bot.user.id:
+                user = ctx.message.author
+                msg = " How original. No one else had thought of trying to get the bot to insult itself. I applaud your creativity. Yawn. Perhaps this is why you don't have friends. You don't add anything new to any conversation. You are more of a bot than me, predictable answers, and absolutely dull to have an actual conversation with."
+                await self.bot.say(user.mention + msg)
+            else:
+                await self.bot.say(user.mention + msg + randchoice(self.items))
+        else:
+            await self.bot.say(ctx.message.author.mention + msg + randchoice(self.items))
 
 def check_folders():
     if not os.path.exists("data/nyaabuff"):
