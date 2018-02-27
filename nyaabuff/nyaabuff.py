@@ -7,25 +7,25 @@ import os
 
 class Nyaabuff:
 
-    """Nyaa buff Cog"""
+    """Nyaa power"""
     def __init__(self, bot):
         self.bot = bot
         self.nyaabuff = fileIO("data/nyaabuff/nyaabuff.json","load")
 
     @commands.command(pass_context=True, no_pm=True)
     async def nyaabuff(self, ctx, user : discord.Member=None):
-        """Give A Nyaa buff to users"""
+        """nyaabuff the user"""
 
         msg = ' '
         if user != None:
             if user.id == self.bot.user.id:
                 user = ctx.message.author
-                msg = "feels your Nyaa"
+                msg = "feel your Nyaa!"
                 await self.bot.say(user.name + msg)
             else:
                 await self.bot.say(user.name + msg + randchoice(self.nyaabuff))
         else:
-            await self.bot.say(ctx.message.author.mention + msg + randchoice(self.nyaabuff))
+            await self.bot.say(ctx.message.author.name + msg + randchoice(self.nyaabuff))
 
 
 def setup(bot):
