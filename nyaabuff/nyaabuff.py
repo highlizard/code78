@@ -52,7 +52,7 @@ class Nyaabuff:
         self.items = fileIO("data/nyaabuff/items.json", "load")
 
     @commands.command()
-    async def nyaabuff(self, user : discord.Member=None):
+    async def nyaabuff(self, ctx, user : discord.Member=None):
         """Force A Nyaa buff to users"""
         if user.id == self.bot.user.id:
             await self.bot.say(":skull: -Dies- :skull:")
