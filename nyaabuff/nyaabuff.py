@@ -53,10 +53,10 @@ class Nyaabuff:
 
     @commands.command()
     async def nyaabuff(self, ctx, user : discord.Member=None):
-        """Force A Nyaa buff to users"""
-        if user != None:
+        """Give A Nyaa buff to users"""
+        
         if user.id == self.bot.user.id:
-            await self.bot.say(":skull: -Dies- :skull:")
+            await self.bot.say("Feels your Nyaa")
             return
         await self.bot.say("-Your {} increase, {} was"
                            " buffed from NyaaNook-".format(rndchoice(self.items),
