@@ -10,7 +10,7 @@ class Nyaabuff:
     """Airenkun's Insult Cog"""
     def __init__(self, bot):
         self.bot = bot
-        self.insults = fileIO("data/nyaabuff/nyaabuff.json","load")
+        self.insults = fileIO("nyaabuff/data/nyaabuff.json","load")
 
     @commands.command(pass_context=True, no_pm=True)
     async def nyaabuff(self, ctx, user : discord.Member=None):
