@@ -43,33 +43,32 @@ defaults = [
     "MP Regenerated per 3 Seconds",]
     
 
-
 class Nyaabuff:
-    """Nyaa buffing command."""
+    """Give Nyaa buff"""
 
     def __init__(self, bot):
         self.bot = bot
-        self.items = fileIO("data/nyaabuff/items.json", "load")
+        self.items = fileIO("data/nyaabuff/nyaalist.json", "load")
 
     @commands.command()
-    async def nyaabuff(self, user : discord.Member=None):
-        """Force A Nyaa buff to users"""
+    async def feed(self, user : discord.Member=None):
+        """buff by NyaaNook"""
         if user.id == self.bot.user.id:
-            await self.bot.say(":skull: -Dies- :skull:")
+            await self.bot.say("Feels your Nyaa")
             return
-        await self.bot.say("-Your {} increase, {} was"
-                           " buffed from NyaaNook-".format(rndchoice(self.items),
+        await self.bot.say("-your {} increased {} was"
+                           " buff".format(rndchoice(self.items),
                                              user.name))
 
 def check_folders():
     if not os.path.exists("data/nyaabuff"):
         print("Creating data/nyaabuff folder...")
-        os.makedirs("data/nyaabuff")
+        os.makedirs("data/feed")
 
 def check_files():
-    f = "data/nyaabuff/items.json"
+    f = "data/nyaabuff/nyaalist.json"
     if not fileIO(f, "check"):
-        print("Creating empty items.json...")
+        print("Creating empty nyaalist.json...")
         fileIO(f, "save", defaults)
 
 
