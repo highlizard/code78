@@ -7,7 +7,7 @@ import os
 
 class Nyaabuff:
 
-    """Airenkun's Insult Cog"""
+    """Nyaa buff Cog"""
     def __init__(self, bot):
         self.bot = bot
         self.nyaabuff = fileIO("data/nyaabuff/nyaabuff.json","load")
