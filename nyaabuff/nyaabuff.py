@@ -54,6 +54,7 @@ class Nyaabuff:
     @commands.command()
     async def nyaabuff(self, ctx, user : discord.Member=None):
         """Force A Nyaa buff to users"""
+        if user != None:
         if user.id == self.bot.user.id:
             await self.bot.say(":skull: -Dies- :skull:")
             return
